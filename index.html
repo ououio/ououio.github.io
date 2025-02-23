@@ -3,102 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>活动页面</title>
+  <title>我的博客</title>
   <style>
-    /* Basic CSS reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    /* 基础样式 */
     body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background: #f5f5f5;
-      color: #333;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
       line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
     }
+    /* 头部样式 */
     header {
-      background: #1abc9c;
+      background: #333;
       color: #fff;
-      padding: 40px 0;
+      padding: 20px 0;
       text-align: center;
     }
     header h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
+      margin: 0;
+      font-size: 2.5em;
     }
     header p {
+      margin: 5px 0 0;
       font-size: 1.2em;
     }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 30px auto;
-    }
-    .cta {
+    /* 导航菜单 */
+    nav {
+      background: #555;
+      padding: 10px 0;
       text-align: center;
-      margin: 50px 0;
     }
-    .cta button {
-      background: #1abc9c;
-      border: none;
+    nav a {
       color: #fff;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background 0.3s ease;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 1em;
     }
-    .cta button:hover {
-      background: #16a085;
+    nav a:hover {
+      text-decoration: underline;
     }
+    /* 主体布局 */
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 10px;
+    }
+    main {
+      flex: 3;
+      margin-right: 20px;
+    }
+    aside {
+      flex: 1;
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
+    /* 博客文章样式 */
+    article {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+    }
+    article h2 {
+      margin-top: 0;
+    }
+    article p {
+      margin: 10px 0;
+    }
+    article a {
+      color: #1abc9c;
+      text-decoration: none;
+    }
+    article a:hover {
+      text-decoration: underline;
+    }
+    /* 页脚 */
     footer {
-      text-align: center;
-      padding: 20px 0;
       background: #333;
       color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 20px;
     }
-    /* Responsive design */
+    /* 响应式 */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.5em;
+      .container {
+        flex-direction: column;
       }
-      .cta button {
-        font-size: 1em;
-        padding: 10px 20px;
+      main {
+        margin-right: 0;
       }
-    }
-    .styled-button {
-      background: linear-gradient(45deg, #1abc9c, #16a085);
-      border: none;
-      color: #fff;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background 0.3s ease, transform 0.2s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .styled-button:hover {
-      background: linear-gradient(45deg, #16a085, #1abc9c);
-      transform: translateY(-2px);
-    }
-    .styled-button:active {
-      transform: translateY(0);
     }
   </style>
 </head>
 <body>
+  <!-- 页头 -->
   <header>
-    <div class="container">
-      <h1>你讨厌南桐吗</h1>
-    </div>
+    <h1>欢迎来到我的博客</h1>
+    <p>分享生活点滴与技术心得</p>
   </header>
-  <button class="styled-button" onclick="window.location.href='0.html'">讨厌</button>
-  <button class="styled-button" onclick="window.location.href='1.html'">不好说</button>
 
-    <footer>
-      <p>&copy; 2025 活动组织者. 保留所有权利.</p>
-    </footer>
-  </body>
-  </html>
+  <!-- 导航菜单 -->
+  <nav>
+    <a href="#">首页</a>
+    <a href="#">关于我</a>
+    <a href="#">归档</a>
+    <a href="#">联系我</a>
+  </nav>
+
+  <!-- 主体内容区域 -->
+  <div class="container">
+    <main>
+      <!-- 第一篇文章 -->
+      <article>
+        <h2>第一篇博客文章</h2>
+        <p>发布时间：2025-02-23</p>
+        <p>这里是文章的内容简介。点击下面链接可以阅读全文，了解更多详细内容。</p>
+        <a href="#">阅读全文</a>
+      </article>
+      
+      <!-- 第二篇文章 -->
+      <article>
+        <h2>第二篇博客文章</h2>
+        <p>发布时间：2025-02-22</p>
+        <p>这里是另一篇文章的简介。分享一些有趣的见解与经验。</p>
+        <a href="#">阅读全文</a>
+      </article>
+    </main>
+    
+    <!-- 侧边栏 -->
+    <aside>
+      <h3>关于我</h3>
+      <p>我是一个热爱生活与技术的人，在这里记录下我的点滴思考与经历。</p>
+      <h3>最新文章</h3>
+      <ul>
+        <li><a href="#">第一篇博客文章</a></li>
+        <li><a href="#">第二篇博客文章</a></li>
+        <li><a href="#">第三篇博客文章</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <!-- 页脚 -->
+  <footer>
+    <p>&copy; 2025 我的博客. 保留所有权利.</p>
+  </footer>
+</body>
+</html>
